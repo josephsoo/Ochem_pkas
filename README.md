@@ -38,3 +38,6 @@ The project is deployed on GitHub Pages. You can access it [here](https://joseph
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Acknowledgements
+The PDF and images used is this repository is property of the CHEM 233 teaching team @ UBC
