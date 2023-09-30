@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #gameBoard, #leaderboard {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+  }
+  
+  #gameBoard div, #leaderboard ul {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  #leaderboard ul {
+    list-style: none;
+  }
+  #compoundRow, #pKaRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  div.draggable:hover {
+    border: 2px solid blue;
+    cursor: grab;
+  }
