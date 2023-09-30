@@ -42,8 +42,9 @@ startGameButton.addEventListener('click', startGame);
 const compounds = [
   { name: 'Sulfuric acid', pKa: -9 },
   { name: 'Hydrochloric acid', pKa: -7 },
-  { name: 'Hydronium ion', pKa: 2 },
+  { name: 'Hydronium ion', pKa: -2 },
   { name: 'Carboxylic acids', pKa: 5 },
+  { name: 'Alcohol Water', pKa: 16 },
   { name: 'Ammonium ion', pKa: 9 },
   { name: 'Protonated amines', pKa: 11 },
   { name: 'Thiol', pKa: 10 },
