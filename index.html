@@ -3,24 +3,90 @@
 <head>
   <title>CHEM 233 pKa</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<!-- Add Firebase database -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 
+  <!-- Add Firebase Auth -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <!-- Add Firebase Realtime Database -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+
+  <style>
+    /* Make the iframe resizable */
+    #pdfIframe {
+      resize: both;
+      overflow: auto;
+      width: 100%;  /* 100% of the container's width */
+      height: 80vh; /* 80% of the viewport height */
+    }
+
+        /* High-tech background */
+        body {
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container for the button and leaderboard */
+    #container {
+      text-align: center;
+    }
+
+    /* Style for the Start Game button */
+    #startGameBtn {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      transition: transform .2s; /* Animation */
+    }
+
+    /* Increase size when hovered */
+    #startGameBtn:hover {
+      transform: scale(1.1);
+    }
+
+    /* Leaderboard styling */
+    #leaderboard {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Leaderboard list */
+    #scoreList {
+      list-style-type: none;
+      padding: 0;
+    }
+  </style>
 </head>
+
 <body>
   <h1>CHEM 233 pKa</h1>
-  <div id="timer">60</div>
+  <div id="pdfDisplay">
+    <iframe id="pdfIframe" src="pka Table 2023.pdf"></iframe>
+</div>
+  <div id="gameBoard"></div>
+  <div id="timer">Time taken: 0</div>
   <div id="score">Score: 0</div>
-  <div id="gameBoard">
-    <!-- Game board will go here -->
-  </div>
-  <div id="leaderboard">
-    <h2>Leaderboard</h2>
-    <ul id="scoreList">
-      <!-- Scores will be listed here -->
-    </ul>
+  <div id="container">
+    <!-- Start Game Button -->
+    <button id="startGameBtn">Start Game</button>
+
+    <!-- Leaderboard -->
+    <div id="leaderboard">
+      <h2>Leaderboard</h2>
+      <ul id="scoreList">
+        <!-- Scores will be populated here -->
+      </ul>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
