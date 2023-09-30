@@ -151,8 +151,8 @@ database.ref('leaderboard').orderByChild('time').limitToLast(10).on('value', (sn
   const scoreList = document.getElementById('scoreList');
   scoreList.innerHTML = '';
 
-  // Convert the scores object to an array and sort it in descending order
-  const sortedScores = Object.keys(scores).map(id => scores[id]).sort((a, b) => b.time - a.time);
+  // Convert the scores object to an array and sort it in ascending order
+  const sortedScores = Object.keys(scores).map(id => scores[id]).sort((a, b) => a.time - b.time);
 
   sortedScores.forEach(score => {
     const li = document.createElement('li');
