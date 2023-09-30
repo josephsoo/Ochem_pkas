@@ -15,12 +15,12 @@ This is a game where players can match chemical compounds with their respective 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repository-name.git
+   git clone https://github.com/josephsoo/Ochem_pkas.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd your-repository-name
+   cd Ochem_pkas
    ```
 
 3. Open `index.html` in your web browser.
